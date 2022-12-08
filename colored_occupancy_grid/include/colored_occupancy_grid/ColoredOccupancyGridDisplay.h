@@ -37,7 +37,7 @@
 #include <OGRE/OgreSceneNode.h>
 #include <OGRE/OgreTextureManager.h>
 
-#include <colored_occupancy_grid/ColoredOccupancyGrid.h>
+#include <colored_occupancy_grid_msgs/ColoredOccupancyGrid.h>
 #include <rviz/message_filter_display.h>
 #endif
 
@@ -58,7 +58,7 @@ class QuaternionProperty;
 namespace colored_occupancy_grid
 {
 
-class ColoredOccupancyGridDisplay : public rviz::MessageFilterDisplay<ColoredOccupancyGrid>
+class ColoredOccupancyGridDisplay : public rviz::MessageFilterDisplay<colored_occupancy_grid_msgs::ColoredOccupancyGrid>
 {
 Q_OBJECT
 
@@ -79,13 +79,13 @@ protected Q_SLOTS:
 
 protected:
 
-  virtual void processMessage(const ColoredOccupancyGrid::ConstPtr& msg);
+  virtual void processMessage(const colored_occupancy_grid_msgs::ColoredOccupancyGrid::ConstPtr& msg);
 
   void clear();
 
   void transformMap();
 
-  ColoredOccupancyGrid::ConstPtr last_msg_;
+  colored_occupancy_grid_msgs::ColoredOccupancyGrid::ConstPtr last_msg_;
 
   Ogre::ManualObject* manual_object_;
   Ogre::TexturePtr texture_;

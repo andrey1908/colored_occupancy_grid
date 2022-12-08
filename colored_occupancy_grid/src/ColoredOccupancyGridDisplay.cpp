@@ -212,7 +212,7 @@ void ColoredOccupancyGridDisplay::clear()
   loaded_ = false;
 }
 
-void ColoredOccupancyGridDisplay::processMessage(const ColoredOccupancyGrid::ConstPtr& msg)
+void ColoredOccupancyGridDisplay::processMessage(const colored_occupancy_grid_msgs::ColoredOccupancyGrid::ConstPtr& msg)
 {
   if (msg->data.empty())
   {
