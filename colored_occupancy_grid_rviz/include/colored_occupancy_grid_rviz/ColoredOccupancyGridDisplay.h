@@ -55,7 +55,7 @@ class VectorProperty;
 class QuaternionProperty;
 }
 
-namespace colored_occupancy_grid
+namespace colored_occupancy_grid_rviz
 {
 
 class ColoredOccupancyGridDisplay : public rviz::MessageFilterDisplay<colored_occupancy_grid_msgs::ColoredOccupancyGrid>

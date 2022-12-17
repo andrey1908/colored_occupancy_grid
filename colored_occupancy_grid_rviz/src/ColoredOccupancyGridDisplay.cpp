@@ -28,7 +28,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-#include "colored_occupancy_grid/ColoredOccupancyGridDisplay.h"
+#include "colored_occupancy_grid_rviz/ColoredOccupancyGridDisplay.h"
 
 #include <ros/ros.h>
 
@@ -45,7 +45,7 @@
 #include <rviz/validate_floats.h>
 #include <rviz/display_context.h>
 
-namespace colored_occupancy_grid
+namespace colored_occupancy_grid_rviz
 {
 
 ColoredOccupancyGridDisplay::ColoredOccupancyGridDisplay()
@@ -402,4 +402,4 @@ void ColoredOccupancyGridDisplay::fixedFrameChanged()
 }  // end namespace colored_occupancy_grid
 
 #include <pluginlib/class_list_macros.h>
-PLUGINLIB_EXPORT_CLASS(colored_occupancy_grid::ColoredOccupancyGridDisplay, rviz::Display)
+PLUGINLIB_EXPORT_CLASS(colored_occupancy_grid_rviz::ColoredOccupancyGridDisplay, rviz::Display)

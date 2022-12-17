@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(colored_occupancy_grid)
+project(colored_occupancy_grid_rviz)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 add_compile_options(-std=c++17)
@@ -17,7 +17,7 @@ find_package(catkin REQUIRED COMPONENTS
 set(CMAKE_AUTOMOC ON)
 
 set(INCLUDE_FILES
-  include/colored_occupancy_grid/ColoredOccupancyGridDisplay.h
+  include/colored_occupancy_grid_rviz/ColoredOccupancyGridDisplay.h
 )
 
 ## This plugin includes Qt widgets, so we must include Qt.
@@ -153,7 +153,7 @@ link_directories(${catkin_LIBRARY_DIRS})
 add_definitions(-DQT_NO_KEYWORDS)
 
 ## Declare a C++ library
-add_library(${PROJECT_NAME}_rviz_plugin
+add_library(${PROJECT_NAME}_plugin
   src/ColoredOccupancyGridDisplay.cpp
   ${MOC_FILES}
 )
@@ -179,7 +179,7 @@ add_library(${PROJECT_NAME}_rviz_plugin
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(${PROJECT_NAME}_rviz_plugin
+target_link_libraries(${PROJECT_NAME}_plugin
   ${QT_LIBRARIES}
   ${catkin_LIBRARIES}
 )
